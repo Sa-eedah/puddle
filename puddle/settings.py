@@ -26,9 +26,12 @@ SECRET_KEY = 'django-insecure--9e7fk+gpzo7!u&#5fd(&w!!tn*!_5xc!68$&++is*vn(ye)^p
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
+# URL to redirect users if they try to access a login-required page 
+# without being authenticated
 LOGIN_URL = '/login/'
+# URL to redirect users to after successfully logging in
 LOGIN_REDIRECT_URL = '/'
+# URL to redirect users to after logging out
 LOGOUT_REDIRECT_URL = '/'
 
 
@@ -41,10 +44,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'conversation',
-    'core',
-    'dashboard',
-    'item',
+    'conversation', # Handles user-to-user messaging / inbox system
+    'core', # Main app (homepage, base templates, general features)
+    'dashboard', # User dashboard (profile, account management, etc.)
+    'item', # Manages items (listings, products, etc.)
 ]
 
 MIDDLEWARE = [
