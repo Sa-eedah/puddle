@@ -74,7 +74,7 @@ def new(request):
 
     return render(request, 'item/form.html', {
         'form': form,
-        'title': 'Edit item', # (❗️probably should say "New item")
+        'title': 'New item', # (❗️probably should say "New item")
     })
 
 # -------------------------------
@@ -100,7 +100,7 @@ def edit(request, pk):
 
     return render(request, 'item/form.html', {
         'form': form,
-        'title': 'New item',# (❗️probably should say "Edit item")
+        'title': 'Edited item',# (❗️probably should say "Edit item")
     })
 
 # -------------------------------

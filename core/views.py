@@ -12,7 +12,10 @@ def index(request):
     # Get all available categories
     categories = Category.objects.all()
     # Render the homepage template with categories and items as context
-    return render(request, 'core/index.html', {'categories':categories, 'items': items,})
+    return render(request, 'core/index.html', {
+        'categories':categories, 
+        'items': items,
+    })
 
 # View for the contact page
 def contact(request):
@@ -33,7 +36,7 @@ def signup(request):
     
     else:
         # If GET request, display an empty signup form
-        form = SignupForm
+        form = SignupForm()
 # Render the signup template with the form
     return render(request, 'core/signup.html', {
         'form':form
